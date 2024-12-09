@@ -24,7 +24,7 @@ game_active = True
 score = 0
 
 # Загрузка изображений
-bird = pygame.image.load("./tasks2/bird.png").convert_alpha()
+bird = pygame.image.load("./bird.png").convert_alpha()
 bird = pygame.transform.scale(bird, (50, 50))
 bird_rect = bird.get_rect(center=(100, HEIGHT // 2))
 
