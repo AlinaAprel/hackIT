@@ -23,6 +23,9 @@ bird_movement = 0
 game_active = True
 score = 0
 
+background = pygame.image.load("./bird.png")
+background = pygame.transform.scale(background, (WIDTH, HEIGHT))
+
 # Загрузка изображений
 bird = pygame.image.load("./bird.png").convert_alpha()
 bird = pygame.transform.scale(bird, (50, 50))
@@ -85,7 +88,7 @@ while True:
             pipes.extend(create_pipe())
 
     # Рисование фона
-    screen.fill(BLUE)
+    #screen.fill(background)
 
     if game_active:
         # Птица
