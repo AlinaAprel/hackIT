@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Смешной тест по Python</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #ff4500;
+        }
+        .question {
+            margin: 20px auto;
+            padding: 15px;
+            border: 2px dashed #ffa500;
+            background-color: #fffacd;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        .options label {
+            margin: 5px;
+            padding: 10px;
+            border: 2px solid #00bfff;
+            background-color: #e6f7ff;
+            color: #333;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: inline-block;
+        }
+        .options label:hover {
+            background-color: #00bfff;
+            color: white;
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
+        input[type="checkbox"]:checked + label {
+            background-color: #1e90ff;
+            color: white;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #submit-btn {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        #submit-btn:hover {
+            background-color: #e63900;
+        }
+    </style>
+</head>
+<body>
+    <h1>Смешной тест по Python 🐍</h1>
+    <form id="quiz">
+        <div class="question">
+            <p>1. Что делает функция <code>print()</code>?</p>
+            <div class="options">
+                <input type="checkbox" id="q1a1" name="q1" value="correct">
+                <label for="q1a1">Печатает текст на экран</label>
+                <input type="checkbox" id="q1a2" name="q1" value="wrong">
+                <label for="q1a2">Вызывает печатный станок</label>
+                <input type="checkbox" id="q1a3" name="q1" value="wrong">
+                <label for="q1a3">Отправляет сообщение в космос</label>
+                <input type="checkbox" id="q1a4" name="q1" value="wrong">
+                <label for="q1a4">Устраивает чаепитие</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>2. Как называется оператор равенства в Python?</p>
+            <div class="options">
+                <input type="checkbox" id="q2a1" name="q2" value="correct">
+                <label for="q2a1">==</label>
+                <input type="checkbox" id="q2a2" name="q2" value="wrong">
+                <label for="q2a2">=</label>
+                <input type="checkbox" id="q2a3" name="q2" value="wrong">
+                <label for="q2a3">!=</label>
+                <input type="checkbox" id="q2a4" name="q2" value="wrong">
+                <label for="q2a4">===</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>3. Какой тип данных хранит <code>True</code> или <code>False</code>?</p>
+            <div class="options">
+                <input type="checkbox" id="q3a1" name="q3" value="wrong">
+                <label for="q3a1">int</label>
+                <input type="checkbox" id="q3a2" name="q3" value="wrong">
+                <label for="q3a2">str</label>
+                <input type="checkbox" id="q3a3" name="q3" value="correct">
+                <label for="q3a3">bool</label>
+                <input type="checkbox" id="q3a4" name="q3" value="wrong">
+                <label for="q3a4">float</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>4. Какой метод используется для добавления элемента в список?</p>
+            <div class="options">
+                <input type="checkbox" id="q4a1" name="q4" value="correct">
+                <label for="q4a1">append()</label>
+                <input type="checkbox" id="q4a2" name="q4" value="wrong">
+                <label for="q4a2">add()</label>
+                <input type="checkbox" id="q4a3" name="q4" value="wrong">
+                <label for="q4a3">insert()</label>
+                <input type="checkbox" id="q4a4" name="q4" value="wrong">
+                <label for="q4a4">push()</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>5. Какой оператор используется для возведения в степень?</p>
+            <div class="options">
+                <input type="checkbox" id="q9a1" name="q9" value="correct">
+                <label for="q9a1">**</label>
+                <input type="checkbox" id="q9a2" name="q9" value="wrong">
+                <label for="q9a2">^</label>
+                <input type="checkbox" id="q9a3" name="q9" value="wrong">
+                <label for="q9a3">%</label>
+                <input type="checkbox" id="q9a4" name="q9" value="wrong">
+                <label for="q9a4">//</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>6. Какой результат у выражения <code>5 % 2</code>?</p>
+            <div class="options">
+                <input type="checkbox" id="q10a1" name="q10" value="wrong">
+                <label for="q10a1">2</label>
+                <input type="checkbox" id="q10a2" name="q10" value="wrong">
+                <label for="q10a2">0</label>
+                <input type="checkbox" id="q10a3" name="q10" value="correct">
+                <label for="q10a3">1</label>
+                <input type="checkbox" id="q10a4" name="q10" value="wrong">
+                <label for="q10a4">5</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>7. Что вернёт выражение <code>"Python" * 3</code>?</p>
+            <div class="options">
+                <input type="checkbox" id="q11a1" name="q11" value="correct">
+                <label for="q11a1">PythonPythonPython</label>
+                <input type="checkbox" id="q11a2" name="q11" value="wrong">
+                <label for="q11a2">Ошибка</label>
+                <input type="checkbox" id="q11a3" name="q11" value="wrong">
+                <label for="q11a3">Python3</label>
+                <input type="checkbox" id="q11a4" name="q11" value="wrong">
+                <label for="q11a4">3Python</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>8. Что возвращает <code>type(42)</code>?</p>
+            <div class="options">
+                <input type="checkbox" id="q12a1" name="q12" value="wrong">
+                <label for="q12a1">float</label>
+                <input type="checkbox" id="q12a2" name="q12" value="correct">
+                <label for="q12a2">int</label>
+                <input type="checkbox" id="q12a3" name="q12" value="wrong">
+                <label for="q12a3">str</label>
+                <input type="checkbox" id="q12a4" name="q12" value="wrong">
+                <label for="q12a4">list</label>
+            </div>
+        </div>    
+        <div class="question">
+            <p>9. Какой результат у выражения <code>bool(0)</code>?</p>
+            <div class="options">
+                <input type="checkbox" id="q17a1" name="q17" value="wrong">
+                <label for="q17a1">True</label>
+                <input type="checkbox" id="q17a2" name="q17" value="correct">
+                <label for="q17a2">False</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>10. Какой метод используется для сортировки списка?</p>
+            <div class="options">
+                <input type="checkbox" id="q18a1" name="q18" value="wrong">
+                <label for="q18a1">arrange()</label>
+                <input type="checkbox" id="q18a2" name="q18" value="correct">
+                <label for="q18a2">sort()</label>
+                <input type="checkbox" id="q18a3" name="q18" value="wrong">
+                <label for="q18a3">order()</label>
+                <input type="checkbox" id="q18a4" name="q18" value="wrong">
+                <label for="q18a4">filter()</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>11. Что делает функция <code>int()</code>?</p>
+            <div class="options">
+                <input type="checkbox" id="q19a1" name="q19" value="correct">
+                <label for="q19a1">Преобразует значение в целое число</label>
+                <input type="checkbox" id="q19a2" name="q19" value="wrong">
+                <label for="q19a2">Преобразует число в строку</label>
+                <input type="checkbox" id="q19a3" name="q19" value="wrong">
+                <label for="q19a3">Удаляет пробелы</label>
+                <input type="checkbox" id="q19a4" name="q19" value="wrong">
+                <label for="q19a4">Находит квадрат числа</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>12. Какой результат у выражения <code>len([1, 2, 3, 4])</code>?</p>
+            <div class="options">
+                <input type="checkbox" id="q20a1" name="q20" value="correct">
+                <label for="q20a1">4</label>
+                <input type="checkbox" id="q20a2" name="q20" value="wrong">
+                <label for="q20a2">3</label>
+                <input type="checkbox" id="q20a3" name="q20" value="wrong">
+                <label for="q20a3">5</label>
+                <input type="checkbox" id="q20a4" name="q20" value="wrong">
+                <label for="q20a4">Ошибка</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>13. Какой результат у выражения <code>not (True and False)</code>?</p>
+            <div class="options">
+                <input type="checkbox" id="q21a1" name="q21" value="correct">
+                <label for="q21a1">True</label>
+                <input type="checkbox" id="q21a2" name="q21" value="wrong">
+                <label for="q21a2">False</label>
+                <input type="checkbox" id="q21a3" name="q21" value="wrong">
+                <label for="q21a3">None</label>
+                <input type="checkbox" id="q21a4" name="q21" value="wrong">
+                <label for="q21a4">Ошибка</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>14. Какой результат у выражения <code>"abc" in "abcdef"</code>?</p>
+            <div class="options">
+                <input type="checkbox" id="q22a1" name="q22" value="correct">
+                <label for="q22a1">True</label>
+                <input type="checkbox" id="q22a2" name="q22" value="wrong">
+                <label for="q22a2">False</label>
+                <input type="checkbox" id="q22a3" name="q22" value="wrong">
+                <label for="q22a3">None</label>
+                <input type="checkbox" id="q22a4" name="q22" value="wrong">
+                <label for="q22a4">Ошибка</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>15. Что вернёт выражение <code>sum([1, 2, 3])</code>?</p>
+            <div class="options">
+                <input type="checkbox" id="q23a1" name="q23" value="correct">
+                <label for="q23a1">6</label>
+                <input type="checkbox" id="q23a2" name="q23" value="wrong">
+                <label for="q23a2">5</label>
+                <input type="checkbox" id="q23a3" name="q23" value="wrong">
+                <label for="q23a3">Ошибка</label>
+                <input type="checkbox" id="q23a4" name="q23" value="wrong">
+                <label for="q23a4">[1, 2, 3]</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>16. Какой результат у выражения <code>[1, 2, 3][1]</code>?</p>
+            <div class="options">
+                <input type="checkbox" id="q24a1" name="q24" value="correct">
+                <label for="q24a1">2</label>
+                <input type="checkbox" id="q24a2" name="q24" value="wrong">
+                <label for="q24a2">1</label>
+                <input type="checkbox" id="q24a3" name="q24" value="wrong">
+                <label for="q24a3">3</label>
+                <input type="checkbox" id="q24a4" name="q24" value="wrong">
+                <label for="q24a4">Ошибка</label>
+            </div>
+        </div>   
+        <div class="question">
+            <p>17. Какой результат у выражения <code>len([1, [2, 3], 4])</code>?</p>
+            <div class="options">
+                <input type="checkbox" id="q25a1" name="q25" value="correct">
+                <label for="q25a1">3</label>
+                <input type="checkbox" id="q25a2" name="q25" value="wrong">
+                <label for="q25a2">4</label>
+                <input type="checkbox" id="q25a3" name="q25" value="wrong">
+                <label for="q25a3">2</label>
+                <input type="checkbox" id="q25a4" name="q25" value="wrong">
+                <label for="q25a4">Ошибка</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>18. Что выведет код: <code>for i in range(3): print(i)</code>?</p>
+            <div class="options">
+                <input type="checkbox" id="q26a1" name="q26" value="correct">
+                <label for="q26a1">0 1 2</label>
+                <input type="checkbox" id="q26a2" name="q26" value="wrong">
+                <label for="q26a2">1 2 3</label>
+                <input type="checkbox" id="q26a3" name="q26" value="wrong">
+                <label for="q26a3">0 1 2 3</label>
+                <input type="checkbox" id="q26a4" name="q26" value="wrong">
+                <label for="q26a4">Ошибка</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>19. Какой результат у выражения <code>sorted([3, 1, 2])</code>?</p>
+            <div class="options">
+                <input type="checkbox" id="q27a1" name="q27" value="correct">
+                <label for="q27a1">[1, 2, 3]</label>
+                <input type="checkbox" id="q27a2" name="q27" value="wrong">
+                <label for="q27a2">[3, 2, 1]</label>
+                <input type="checkbox" id="q27a3" name="q27" value="wrong">
+                <label for="q27a3">[1, 3, 2]</label>
+                <input type="checkbox" id="q27a4" name="q27" value="wrong">
+                <label for="q27a4">Ошибка</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>20. Какой результат у выражения <code>3 > 2 and 2 > 1</code>?</p>
+            <div class="options">
+                <input type="checkbox" id="q28a1" name="q28" value="correct">
+                <label for="q28a1">True</label>
+                <input type="checkbox" id="q28a2" name="q28" value="wrong">
+                <label for="q28a2">False</label>
+                <input type="checkbox" id="q28a3" name="q28" value="wrong">
+                <label for="q28a3">None</label>
+                <input type="checkbox" id="q28a4" name="q28" value="wrong">
+                <label for="q28a4">Ошибка</label>
+            </div>
+        </div>             
+            
+        <button type="button" id="submit-btn" onclick="calculateScore()">Результаты</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        function calculateScore() {
+            let score = 0;
+            const questions = document.querySelectorAll(".question");
+            questions.forEach((question) => {
+                const options = question.querySelectorAll("input[type='checkbox']");
+                options.forEach((option) => {
+                    if (option.checked && option.value === "correct") {
+                        score++;
+                    }
+                });
+            });
+            document.getElementById("result").textContent = `Ваш результат: ${score} из ${questions.length}`;
+        }
+    </script>
+</body>
+</html>
