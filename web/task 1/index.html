@@ -1,0 +1,78 @@
+<!-- Задание по файлу index.html: 
+        1. Подключи файл стилей после последнего тега meta
+            <link rel="stylesheet" href="styles.css" />
+            
+        2. Измени название страницы на "Aim Training" в теге title
+
+        3. Внутри тега div с классом screen создай:
+            - тег h1 с текстом Aim Training
+            - тег a с href="#", классом start, id="start" и текстом Start Game
+           
+        4. Внутри тега div с классом "screen" создать:
+            - тег h1 с текстом "Choose the time"
+        
+        5. Скорректируем кнопки выбора времени, для этого:
+            a. изменим data-time кнопок на data-time="10", data-time="20", data-time="30", data-time="40"
+            соответственно их порядку
+            b. напишем внутри кнопок текст 10 sec, 20 sec, 30 sec, 40 sec
+            соответственно значению в data-time
+
+        6. Внутри последнего тега div создадим конструкцию:
+            - добавим тег h3 с текстом "00:00 seconds left"
+            - текст "00:00" обернем в тег span c id="time"
+            - после добавим тег div c class="board" и id="board"
+        
+        7. Подключим программу app.js перед закрывающимся тегом body
+        <script src="app.js"></script>
+            -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--#2-->
+    <title>Document</title>
+</head>
+<body>
+    <div class="screen">
+        <!--#3-->
+    </div>
+
+    <div class="screen">
+        <!--#4-->
+        <ul class="time-list" id="time-list">
+          <li>
+            <!--#5.a-->
+            <button class="time-btn" data-time="">
+              <!--#5.b-->
+            </button>
+          </li>
+          <li>
+            <!--#5.a-->
+            <button class="time-btn" data-time="">
+              <!--#5.b-->
+            </button>
+          </li>
+          <li>
+            <!--#5.a-->
+            <button class="time-btn" data-time="">
+              <!--#5.b-->
+            </button>
+          </li>
+          <li>
+            <!--#5.a-->
+            <button class="time-btn" data-time="">
+              <!--#5.b-->
+            </button>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="screen">
+        <!--#6-->
+      </div>
+      <!--#7-->
+    
+</body>
+</html>
