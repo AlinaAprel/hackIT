@@ -1,0 +1,65 @@
+/*
+    1. Расположи селектор container по середине экрана
+    .container {
+        text-align: center;
+    }
+
+    2.  Сделай заголовок "Нажмите на кружок цвета: " белым. Для этого:
+        - через знак # напиши id заголовка (например, #name, где name – id заголовка)
+        - внутри фигурных скобок пропиши свойство – color: #d0d0d0
+
+    3. Сделай текст "Очки: 0" и "Время: 0" белого цвета. Для этого:
+        -  найди id текстов в этом файле
+        - добавь внутрь фигурный скобок свойство – color: #d0d0d0
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(90deg, #29323C 0%, #485563 100%);
+}
+
+/* #1 */
+
+/* #2 */
+
+#gameArea {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#score, #timer {
+    margin-top: 20px;
+    font-size: 1.5em;
+    /* #3 */
+}
+
+#startButton {
+  background-color: transparent;
+  border: 2px solid #C0C0C0;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  padding: .5rem 1rem;
+  margin: 1.2rem;
+  font-size: 1.5rem;
+}
+
+#startButton:hover {
+    border: 2px solid #16D9E3;
+    color: #16D9E3;
+  }

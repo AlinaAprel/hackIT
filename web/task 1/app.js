@@ -9,7 +9,7 @@ const colors = ['linear-gradient(90deg, #16D9E3 0%, #30C7EC 47%, #46AEF7 100%)',
                 'linear-gradient(90deg, #8178ff 0%, #9483e4 47%, #e4b6ff 100%)',
                 'linear-gradient(90deg, #ff1111 0%, #f53d3d 47%, #f07272 100%)']
 let time = 0;
-let score = 0
+let score = 0;
 
 startBtn.addEventListener('click', (event) => {
     event.preventDefault()
