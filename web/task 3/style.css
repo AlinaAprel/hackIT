@@ -1,0 +1,29 @@
+/*
+    1. Сделай фон body цвета #f0f0f0;
+
+    2. Сделай фон canvas цвета #fff;
+*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    /* #1 */
+}
+
+.toolbar {
+    margin-bottom: 10px;
+}
+
+.toolbar button, .toolbar input {
+    margin: 5px;
+}
+
+canvas {
+    border: 1px solid #000;
+    /* #2 */
+    cursor: crosshair;
+}
