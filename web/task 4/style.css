@@ -1,0 +1,24 @@
+/*
+    1. Для тега body напиши свойства:
+        a. высоту (height) равной 100vh
+        b. внешний отступ (margin) равным 0
+        с. Фон цветом #000;
+
+    2. Для тега canvas напиши свойства:
+        a. Фон цветом #000;
+        b. рамки (border) со значением 1px solid #fff;
+*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 1.a */
+    /* 1.b */
+    /* 1.c */
+}
+
+canvas {
+    /* 2.a */
+    /* 2.b */
+}
