@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1000px;
+}
+
+.shape {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+/* Вращающийся квадрат */
+.rotate {
+    background-color: #ff6b6b;
+    animation: rotate 4s linear infinite;
+}
+
+/* Пульсирующий круг */
+.pulse {
+    background-color: #48dbfb;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Движущийся треугольник */
+.move {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #1dd1a1;
+    animation: move 3s ease-in-out infinite alternate;
+}
+
+/* Меняющий цвет прямоугольник */
+.color-change {
+    background-color: #f368e0;
+    animation: colorChange 5s linear infinite;
+}
+
+/* Морфинг фигура (квадрат в круг) */
+.morph {
+    background-color: #ff9f43;
+    animation: morph 4s ease-in-out infinite;
+}
+
+/* Анимации */
+@keyframes rotate {
+    from { transform: rotate(/* #1 */); }
+    to { transform: rotate(/* #1 */); }
+}
+
+/*
+    1. В @keyframes rotate поставь первый угол - 0deg, второй угол - 360deg
+
+    2. В @keyframes pulse на 0%: scale(1), на 50%: scale(1.3), на 100%: scale(1)
+
+    3. В @keyframes move translateX – -50px, translateX – 50px.
+
+    4. В @keyframes colorChange задай свои цвета в формате HEX.
+
+    5. В @keyframes morph задай градусы: 180deg, 360deg.
+*/
+
+@keyframes pulse {
+    0% { transform: /* #2 */; }
+    50% { transform: /* #2 */; }
+    100% { transform: /* #2 */; }
+}
+
+@keyframes move {
+    from { transform: translateX(/* #3 */); }
+    to { transform: translateX(/* #3 */); }
+}
+
+@keyframes colorChange {
+    0% { background-color: /* #4 */; }
+    25% { background-color: /* #4 */; }
+    50% { background-color: /* #4 */; }
+    75% { background-color: /* #4 */; }
+    100% { background-color: /* #4 */; }
+}
+
+@keyframes morph {
+    0% { border-radius: 0; }
+    50% { border-radius: 50%; transform: rotate(/* #5 */); }
+    100% { border-radius: 0; transform: rotate(/* #5 */); }
+}
