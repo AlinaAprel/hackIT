@@ -1,0 +1,21 @@
+/*
+    1. Для селектора square напиши свойство transition с параметрами:
+    transform 1s ease;
+
+    2. При наведение напиши свойству transform параметр:
+    rotate(360deg);
+*/
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+    border-radius: 20%;
+    margin: 100px auto;
+    /* #1 */
+  }
+  
+  .square:hover {
+    /* #2 */
+  }
+  

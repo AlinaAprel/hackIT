@@ -1,0 +1,19 @@
+/*
+    1. Создай @keyframes под названием moveRight. В него занеси свойства:
+        0%   { left: 0; }
+        100% { left: 300px; }
+
+    2. Для box зададим свойство:
+    animation с параметрами: moveRight 3s infinite alternate
+*/
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    position: relative;
+    /* #2 */
+  }
+  
+  /* #1 */
+  
