@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    perspective: 1000px; /* Глубина 3D-сцены */
+  }
+  
+  .scene {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+  }
+  
+  .cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotateCube 8s infinite linear;
+  }
+  
+  .face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    opacity: 0.9;
+  }
+
+  /*
+    2. Для селектора front допишем свойство:
+        transform: translate3d(0, 0, 100px);
+    
+    3. Для селектора back напишем свойство transform c функцией translate3D
+        В функции параметры: 0, 0, -100px
+    
+    4. Для селектора left в свойстве transform используем
+         функции translate3D и rotateY (писать через пробел)
+
+         Для translate3D x – -100px, y – 0, z – 0.
+         Для rotateY напиши угол в 90 градусов
+  */
+  
+  .front {
+    background: rgba(255, 0, 0, 0.7);
+    /* #2 */
+  }
+  
+  .back {
+    background: rgba(0, 0, 255, 0.7);
+    /* #3 */
+  }
+  
+  .left {
+    background: rgba(0, 255, 0, 0.7);
+    /* #4 */
+  }
+  
+  .right {
+    background: rgba(255, 255, 0, 0.7);
+    transform: translate3d(100px, 0, 0) rotateY(90deg);
+  }
+  
+  .top {
+    background: rgba(128, 0, 128, 0.7);
+    transform: translate3d(0, -100px, 0) rotateX(90deg);
+  }
+  
+  .bottom {
+    background: rgba(255, 165, 0, 0.7);
+    transform: translate3d(0, 100px, 0) rotateX(90deg);
+  }
+
+  /*
+    1. Создай анимацию под названием rotateCube
+        Настройки для анимации:
+        from {
+            transform: rotateY(0) translate3d(0, 0, 0);
+        }
+        to {
+            transform: rotateY(360deg) translate3d(0, 0, 0);
+        }
+  */
+  
+/* #1 */

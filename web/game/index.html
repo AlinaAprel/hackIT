@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поймай кота</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Поймай кота!</h1>
+        <p>Очки: <span id="score">0</span></p>
+        <p>Время: <span id="time">30</span> секунд</p>
+        <div id="cat"></div>
+    </div>
+
+    <!-- Звуковые эффекты -->
+    <audio id="meowSound" src="https://www.soundjay.com/misc/sounds/cat-meow-1.mp3" preload="auto"></audio>
+    <audio id="gameOverSound" src="https://www.soundjay.com/misc/sounds/game-over-1.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
