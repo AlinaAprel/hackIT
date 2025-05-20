@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #0a0a1a;
+    color: white;
+}
+
+.game-container {
+    text-align: center;
+    width: 600px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#game-area {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: #000033;
+    border: 2px solid #4444aa;
+    overflow: hidden;
+}
+
+.spaceship {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    background-color: #44aa44;
+    bottom: 20px;
+    left: 275px;
+    border-radius: 5px;
+}
+
+.spaceship::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    background-color: #44aa44;
+    bottom: -20px;
+    left: 20px;
+}
+
+.bullet {
+    position: absolute;
+    width: 4px;
+    height: 15px;
+    background-color: #ff5555;
+    bottom: 50px;
+}
+
+.meteor {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #888888;
+    border-radius: 50%;
+    top: 0;
+}
+
+.controls {
+    margin-top: 20px;
+    color: #aaaaaa;
+}
