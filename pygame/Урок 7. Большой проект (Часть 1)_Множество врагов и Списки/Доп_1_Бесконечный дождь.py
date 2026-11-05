@@ -5,6 +5,6 @@
 # нужно телепортировать его обратно наверх в случайную точку X и случайную точку Y (отрицательную).
 
 # Подсказка для детей (добавить внутрь for m in meteors):
-    if m.y > HEIGHT:
-        m.y = random.randint(-500, -50)
-        m.x = random.randint(0, WIDTH - 50)
+if m.y > HEIGHT:
+    m.y = random.randint(-500, -50)
+    m.x = random.randint(0, WIDTH - 50)
