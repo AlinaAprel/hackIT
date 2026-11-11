@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Маршрутный лист: Обучение нейросетей</title>
+<style>
+  @page { size: A4 portrait; margin: 12mm; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; font-size: 10pt; line-height: 1.35; color: #1a1a1a; }
+  h1 { font-size: 14pt; text-align: center; color: #0d47a1; margin: 0 0 4px 0; text-transform: uppercase; }
+  .header { border-bottom: 2px solid #0d47a1; padding-bottom: 6px; margin-bottom: 10px; font-size: 10pt; }
+  .memo { background: #e3f2fd; border: 1px solid #90caf9; padding: 6px 10px; border-radius: 4px; margin-bottom: 10px; font-size: 9pt; }
+  .level-card { border: 1.5px solid #333; border-radius: 6px; padding: 8px 10px; margin-bottom: 10px; page-break-inside: avoid; }
+  .lvl-1 { border-color: #2e7d32; background: #fafefa; }
+  .lvl-2 { border-color: #0277bd; background: #f8fcff; }
+  .lvl-3 { border-color: #ef6c00; background: #fffbf6; }
+  .lvl-4 { border-color: #6a1b9a; background: #fcf8ff; }
+  .lvl-title { font-weight: bold; font-size: 11pt; margin-bottom: 4px; display: flex; justify-content: space-between; }
+  .code-lines { background: #fff; border: 1px dashed #777; border-radius: 4px; height: 60px; margin: 4px 0; }
+  .check-box { background: rgba(0,0,0,0.03); padding: 5px; border-radius: 4px; margin-top: 4px; font-size: 9pt; }
+  .formula { font-family: monospace; font-weight: bold; background: #eee; padding: 2px 6px; border-radius: 3px; }
+</style>
+</head>
+<body>
+  <h1>📋 Лабораторный журнал: Обучение нейросетей</h1>
+  <div class="header">
+    <b>Исследователь:</b> ________________________________________________ 
+  </div>
+
+  <div class="memo">
+    <b>🧠 Закон обучения:</b> Соблюдай баланс клавиш! Если спамить одну кнопку — нейросеть сломается. 
+    Пока тикает таймер — подавай примеры. Когда таймер = 0 — проводи тест по чек-листу.
+  </div>
+
+  <!-- УРОВЕНЬ 1 -->
+  <div class="level-card lvl-1">
+    <div class="lvl-title"><span>🟢 Уровень 1: Распознавание цветов</span> <span>Таймер: 60 сек | Клавиши: G и Y</span></div>
+    <div><b>1. Тренировка:</b> Ритмично чередуй: <span class="formula">G → Y → G → Y</span> (1 клик в 2 сек).</div>
+    <div class="check-box">
+      <b>2. Самопроверка (Экзамен после 60 сек):</b><br>
+      [ &nbsp; ] Нажал G — круг зеленый? &nbsp;&nbsp;&nbsp; 
+      [ &nbsp; ] Нажал Y — круг желтый? &nbsp;&nbsp;&nbsp; 
+      [ &nbsp; ] Тест Y-Y-G-Y-G совпал 5 из 5? <b>Итог:</b> [ &nbsp; ] СДАНО &nbsp; [ &nbsp; ] ПЕРЕСДАЧА
+    </div>
+  </div>
+
+  <!-- УРОВЕНЬ 2 -->
+  <div class="level-card lvl-2">
+    <div class="lvl-title"><span>🐢 Уровень 2: Направление движения</span> <span>Таймер: 90 сек | Клавиши: ВВЕРХ / ВНИЗ</span></div>
+    <div><b>1. Тренировка:</b> Обучай парами: <span class="formula">ВВЕРХ → ВВЕРХ → ВНИЗ → ВНИЗ</span> (не менее 10 серий).</div>
+    <div class="check-box">
+      <b>2. Самопроверка (Экзамен после 90 сек):</b><br>
+      [ &nbsp; ] 3 раза ВВЕРХ — ровно 3 шага вперед? &nbsp;&nbsp;&nbsp; 
+      [ &nbsp; ] 3 раза ВНИЗ — вернулась назад? <b>Итог:</b> [ &nbsp; ] СДАНО &nbsp; [ &nbsp; ] ПЕРЕСДАЧА
+    </div>
+  </div>
+
+  <!-- УРОВЕНЬ 3 -->
+  <div class="level-card lvl-3">
+    <div class="lvl-title"><span>📐 Уровень 3: Умный поворот</span> <span>Таймер: 120 сек | Клавиши: 1 (90°) и 2 (45°)</span></div>
+    <div><b>1. Тренировка:</b> Чередуй пары: <span class="formula">1 (резкий) → 2 (плавный)</span> с паузой на прорисовку.</div>
+    <div class="check-box">
+      <b>2. Самопроверка (Экзамен после 120 сек):</b><br>
+      [ &nbsp; ] 4 раза клавиша "1" замкнули квадрат? &nbsp;&nbsp;&nbsp; 
+      [ &nbsp; ] 8 раз клавиша "2" дали круг/восьмиугольник? <b>Итог:</b> [ &nbsp; ] СДАНО
+    </div>
+  </div>
+
+  <!-- УРОВЕНЬ 4 -->
+  <div class="level-card lvl-4">
+    <div class="lvl-title"><span>🔷 Уровень 4: Распознавание 3 фигур</span> <span>Таймер: 150 сек | Клавиши: C, T, S</span></div>
+    <div><b>1. Тренировка:</b> Строгий хоровод без пропусков (15 раз): <span class="formula">C (круг) → T (треугольник) → S (квадрат)</span></div>
+    <div class="check-box">
+      <b>2. Самопроверка вразброс:</b> [ &nbsp; ] T-треугольник &nbsp; [ &nbsp; ] S-квадрат &nbsp; [ &nbsp; ] C-круг &nbsp; [ &nbsp; ] S-квадрат &nbsp; [ &nbsp; ] T-треугольник<br>
+      <b>Результат:</b> [ &nbsp; ] 5 из 5 верных (СДАНО) &nbsp;&nbsp; [ &nbsp; ] Ошибка (ПЕРЕСДАЧА)
+    </div>
+  </div>
+</body>
+</html>
